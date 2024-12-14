@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/css/style.css">
+    <!-- Use url_for to correctly link static files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Speech Recognition Calculator | GLP</title>
 </head>
-
 
 <body>
     <div class="container">
@@ -52,10 +52,7 @@
         </div>
         <div id="status" class="status"></div>
     </div>
-    <script src="static/js/script.js"></script>
+    <!-- Use url_for to correctly link JS file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
-
-
-
-
