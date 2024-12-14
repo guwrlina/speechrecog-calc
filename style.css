@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
-
+/* General styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +6,6 @@
     box-sizing: border-box;
     user-select: none;
 }
-
 
 body {
     height: 100vh;
@@ -21,6 +19,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
 }
 
 .calculator {
@@ -28,24 +29,21 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 3px rgba(62, 53, 15, 0.219);
+    width: 100%;
 }
 
 .calculator form input {
     border: 0;
     outline: 0;
-    width: 60px;
+    width: 22%;
     height: 60px;
-    border-radius: 20px;
-    font-family: Nunito;
+    border-radius: 10px;
+    font-family: Nunito, sans-serif;
     font-weight: 700;
-    font-size: 1.7em;
+    font-size: 1.2em;
     color: white;
     cursor: pointer;
-    margin: 10px;
-}
-
-.calculator form input.NumpadBtns {
-    background: #907a37;
+    margin: 5px 2px;
 }
 
 form .display {
@@ -56,19 +54,18 @@ form .display {
 
 form .display input {
     text-align: right;
-    flex: 2;
-    font-size: 45px;
-    box-shadow: none;
-    padding: 20px;
-    box-sizing: border-box;
-    background: #f4eeee; 
+    flex: 1;
+    font-size: 1.2rem;
+    padding: 10px;
+    background: #f4eeee;
     box-shadow: 0 0 10px 3px #00000033;
-    height: 80px;
+    height: 50px;
     color: rgb(1, 1, 1);
+    border-radius: 5px;
 }
 
 form input.equal {
-    width: 145px;
+    width: 48%;
     background: #e23838;
 }
 
@@ -93,11 +90,12 @@ form input.ac, form input.del {
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .audio-btn {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 14px;
     background-color: #907a37;
     color: white;
     border: none;
@@ -122,5 +120,49 @@ form input.ac, form input.del {
     text-align: center;
 }
 
+h5 {
+    text-align: center;
+    color: #333;
+}
 
+/* Responsive styles */
+@media (max-width: 768px) {
+    form .display input {
+        font-size: 1rem;
+        height: 40px;
+    }
+
+    .calculator form input {
+        width: 22%;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .audio-btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    form .display input {
+        font-size: 0.9rem;
+        height: 35px;
+    }
+
+    .calculator form input {
+        width: 20%;
+        height: 45px;
+        font-size: 0.9rem;
+    }
+
+    .audio-btn {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+
+    h5 {
+        font-size: 0.9rem;
+    }
+}
 
